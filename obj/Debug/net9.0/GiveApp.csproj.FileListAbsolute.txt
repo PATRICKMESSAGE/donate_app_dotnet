@@ -475,3 +475,4 @@ C:\Users\Patrick\Documents\Projects\GiveApp\obj\Debug\net9.0\refint\GiveApp.dll
 C:\Users\Patrick\Documents\Projects\GiveApp\obj\Debug\net9.0\GiveApp.pdb
 C:\Users\Patrick\Documents\Projects\GiveApp\obj\Debug\net9.0\GiveApp.genruntimeconfig.cache
 C:\Users\Patrick\Documents\Projects\GiveApp\obj\Debug\net9.0\ref\GiveApp.dll
+C:\Users\Patrick\Documents\Projects\GiveApp\obj\Debug\net9.0\GiveApp.sourcelink.json

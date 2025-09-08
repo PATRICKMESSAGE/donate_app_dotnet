@@ -3,29 +3,70 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - GiveApp</title>
+    <title>@ViewData["Title"] - DonationApp</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/GiveApp.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+
+        footer {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+    </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">GiveApp</a>
+                <a class="navbar-brand" href="/">DonationApp</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Welcome", "Home")">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Donate", "Home")">Donate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Identity/Account/Login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Identity/Account/Register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Dashboard", "Home")">Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
 
-    <div class="container mt-4 flex-grow-1">
-        @RenderBody()
-    </div>
+    <main class="container flex-grow-1 d-flex flex-column">
+        <div class="mt-4 flex-grow-1 d-flex flex-column">
+            @RenderBody()
+        </div>
+    </main>
 
-    <footer class="bg-dark text-white mt-auto py-3" style="width:100%; margin-bottom:0; padding-bottom:0;">
+    <footer class="bg-dark text-white mt-auto py-3 w-100" style="margin-bottom:0; padding-bottom:0; border:0;">
         <div class="container text-center">
             <div class="mb-2">
-                <span>GiveApp &copy; @DateTime.Now.Year &mdash; Making a difference together.</span>
+                <span>DonationApp &copy; @DateTime.Now.Year &mdash; Making a difference together.</span>
             </div>
             <div>
                 <a href="https://wa.me/your-number" class="text-white me-3" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>

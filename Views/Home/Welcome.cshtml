@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Welcome";
+    Layout = "_Layout";
+}
+
+<div class="container flex-grow-1 d-flex align-items-center justify-content-center" style="min-height: 70vh;">
+    <div class="row w-100">
+        <div class="col-md-8 mx-auto text-center">
+            <h1 class="display-4 mb-4">Welcome to GiveApp!</h1>
+            <p class="lead mb-4">
+                GiveApp is your platform for making a difference. Donate easily and securely using Ecocash, Visa, Bank, or PesePay.
+            </p>
+            <a href="@Url.Action("Donate", "Home")" class="btn btn-success btn-lg me-2">Donate Now</a>
+            <a href="@Url.Action("Register", "Account", new { area = "Identity" })" class="btn btn-outline-primary btn-lg">Create Account</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="row">
+    <!-- Left side: welcome + images -->
+    <div class="col-md-8">
+        <div class="jumbotron bg-light p-4 rounded shadow-sm">
+            <h1 class="display-5">Welcome to DonationApp</h1>
+            <p class="lead">Together, we can make a difference! Donate easily using EcoCash, Visa, or Bank Transfer via Pesepay.</p>
+        </div>
+
+        <div class="mt-4">
+            <h3>Our Impact</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/250x150.png?text=Helping+Children" class="img-fluid rounded shadow-sm" />
+                </div>
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/250x150.png?text=Food+Donations" class="img-fluid rounded shadow-sm" />
+                </div>
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/250x150.png?text=Community+Support" class="img-fluid rounded shadow-sm" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right side: login/signup card -->
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h4 class="card-title">Login</h4>
+                <form method="post" action="/Home/Login">
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="email" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label>Password</label>
+                        <input type="password" class="form-control" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+                <hr />
+                <p class="text-center">Don’t have an account?</p>
+                <a href="/Home/Register" class="btn btn-outline-primary w-100">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>

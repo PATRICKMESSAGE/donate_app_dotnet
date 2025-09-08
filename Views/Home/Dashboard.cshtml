@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "_Layout";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="mb-4">User Dashboard</h2>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Welcome, @User.Identity?.Name!</h5>
+                    <p class="card-text">Thank you for being part of GiveApp.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Make a Donation</h5>
+                            <p class="card-text">Support a cause of your choice.</p>
+                            <a href="@Url.Action("Donate", "Home")" class="btn btn-success">Donate</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Donation History</h5>
+                            <p class="card-text">View your past donations.</p>
+                            <a href="#" class="btn btn-primary disabled">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Profile</h5>
+                            <p class="card-text">Manage your account details.</p>
+                            <a href="@Url.Action("Manage", "Account", new { area = "Identity" })" class="btn btn-outline-secondary">Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
